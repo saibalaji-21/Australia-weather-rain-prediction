@@ -1,0 +1,24 @@
+2025-05-04 16:25:38,207 - INFO - Data Processing initialized..
+2025-05-04 16:25:39,074 - INFO - Data loaded sucesfuly...
+2025-05-04 16:25:39,347 - INFO - Basic data processing done...
+2025-05-04 16:25:39,377 - INFO - Label mapping for Location
+2025-05-04 16:25:39,377 - INFO - {'Adelaide': 0, 'Albury': 1, 'AliceSprings': 2, 'BadgerysCreek': 3, 'Ballarat': 4, 'Bendigo': 5, 'Brisbane': 6, 'Cairns': 7, 'Canberra': 8, 'Cobar': 9, 'CoffsHarbour': 10, 'Dartmoor': 11, 'Darwin': 12, 'GoldCoast': 13, 'Hobart': 14, 'Katherine': 15, 'Launceston': 16, 'Melbourne': 17, 'MelbourneAirport': 18, 'Mildura': 19, 'Moree': 20, 'MountGambier': 21, 'MountGinini': 22, 'Nhil': 23, 'NorahHead': 24, 'NorfolkIsland': 25, 'Nuriootpa': 26, 'PearceRAAF': 27, 'Penrith': 28, 'Perth': 29, 'PerthAirport': 30, 'Portland': 31, 'Richmond': 32, 'Sale': 33, 'SalmonGums': 34, 'Sydney': 35, 'SydneyAirport': 36, 'Townsville': 37, 'Tuggeranong': 38, 'Uluru': 39, 'WaggaWagga': 40, 'Walpole': 41, 'Watsonia': 42, 'Williamtown': 43, 'Witchcliffe': 44, 'Wollongong': 45, 'Woomera': 46}
+2025-05-04 16:25:39,409 - INFO - Label mapping for WindGustDir
+2025-05-04 16:25:39,409 - INFO - {'E': 0, 'ENE': 1, 'ESE': 2, 'N': 3, 'NE': 4, 'NNE': 5, 'NNW': 6, 'NW': 7, 'S': 8, 'SE': 9, 'SSE': 10, 'SSW': 11, 'SW': 12, 'W': 13, 'WNW': 14, 'WSW': 15}
+2025-05-04 16:25:39,427 - INFO - Label mapping for WindDir9am
+2025-05-04 16:25:39,427 - INFO - {'E': 0, 'ENE': 1, 'ESE': 2, 'N': 3, 'NE': 4, 'NNE': 5, 'NNW': 6, 'NW': 7, 'S': 8, 'SE': 9, 'SSE': 10, 'SSW': 11, 'SW': 12, 'W': 13, 'WNW': 14, 'WSW': 15}
+2025-05-04 16:25:39,455 - INFO - Label mapping for WindDir3pm
+2025-05-04 16:25:39,455 - INFO - {'E': 0, 'ENE': 1, 'ESE': 2, 'N': 3, 'NE': 4, 'NNE': 5, 'NNW': 6, 'NW': 7, 'S': 8, 'SE': 9, 'SSE': 10, 'SSW': 11, 'SW': 12, 'W': 13, 'WNW': 14, 'WSW': 15}
+2025-05-04 16:25:39,486 - INFO - Label mapping for RainToday
+2025-05-04 16:25:39,486 - INFO - {'No': 0, 'Yes': 1}
+2025-05-04 16:25:39,518 - INFO - Label mapping for RainTomorrow
+2025-05-04 16:25:39,518 - INFO - {'No': 0, 'Yes': 1}
+2025-05-04 16:25:39,518 - INFO - Label Encoding DOne....
+2025-05-04 16:25:39,518 - INFO - Index(['Location', 'MinTemp', 'MaxTemp', 'Rainfall', 'Evaporation', 'Sunshine',
+       'WindGustDir', 'WindGustSpeed', 'WindDir9am', 'WindDir3pm',
+       'WindSpeed9am', 'WindSpeed3pm', 'Humidity9am', 'Humidity3pm',
+       'Pressure9am', 'Pressure3pm', 'Cloud9am', 'Cloud3pm', 'Temp9am',
+       'Temp3pm', 'RainToday', 'Year', 'Month', 'Day'],
+      dtype='object')
+2025-05-04 16:25:39,613 - INFO - Splitted and saved sucesfully....
+2025-05-04 16:25:39,613 - INFO - Data Procesing Completed....

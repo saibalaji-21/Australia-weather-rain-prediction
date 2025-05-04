@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: mlops
+Version: 0.1
+Summary: MLOPS PROJECT
+Author: Sai
+Author-email: wihelmsai@gmail.com
+Requires-Python: >=3.7
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary

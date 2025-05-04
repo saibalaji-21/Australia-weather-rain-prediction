@@ -1,0 +1,2 @@
+2025-05-03 23:16:39,058 - INFO - Data Processing initialized..
+2025-05-03 23:16:39,078 - ERROR - Error while loading data [Errno 2] No such file or directory: 'artifacts/raw/data.csv'

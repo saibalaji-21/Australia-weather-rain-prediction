@@ -1,0 +1,38 @@
+2025-05-01 11:53:41,064 - INFO - Data Processing initialized.
+2025-05-01 11:53:41,570 - INFO - Data loaded succesfully from artifacts/raw/weatherAUS.csv.
+2025-05-01 11:53:41,962 - INFO - Basic processing done...
+2025-05-01 11:53:41,992 - INFO - Label mapping for Location: {'Adelaide': 0, 'Albury': 1, 'AliceSprings': 2, 'BadgerysCreek': 3, 'Ballarat': 4, 'Bendigo': 5, 'Brisbane': 6, 'Cairns': 7, 'Canberra': 8, 'Cobar': 9, 'CoffsHarbour': 10, 'Dartmoor': 11, 'Darwin': 12, 'GoldCoast': 13, 'Hobart': 14, 'Katherine': 15, 'Launceston': 16, 'Melbourne': 17, 'MelbourneAirport': 18, 'Mildura': 19, 'Moree': 20, 'MountGambier': 21, 'MountGinini': 22, 'Nhil': 23, 'NorahHead': 24, 'NorfolkIsland': 25, 'Nuriootpa': 26, 'PearceRAAF': 27, 'Penrith': 28, 'Perth': 29, 'PerthAirport': 30, 'Portland': 31, 'Richmond': 32, 'Sale': 33, 'SalmonGums': 34, 'Sydney': 35, 'SydneyAirport': 36, 'Townsville': 37, 'Tuggeranong': 38, 'Uluru': 39, 'WaggaWagga': 40, 'Walpole': 41, 'Watsonia': 42, 'Williamtown': 43, 'Witchcliffe': 44, 'Wollongong': 45, 'Woomera': 46}
+2025-05-01 11:53:42,039 - INFO - Label mapping for WindGustDir: {'E': 0, 'ENE': 1, 'ESE': 2, 'N': 3, 'NE': 4, 'NNE': 5, 'NNW': 6, 'NW': 7, 'S': 8, 'SE': 9, 'SSE': 10, 'SSW': 11, 'SW': 12, 'W': 13, 'WNW': 14, 'WSW': 15}
+2025-05-01 11:53:42,070 - INFO - Label mapping for WindDir9am: {'E': 0, 'ENE': 1, 'ESE': 2, 'N': 3, 'NE': 4, 'NNE': 5, 'NNW': 6, 'NW': 7, 'S': 8, 'SE': 9, 'SSE': 10, 'SSW': 11, 'SW': 12, 'W': 13, 'WNW': 14, 'WSW': 15}
+2025-05-01 11:53:42,086 - INFO - Label mapping for WindDir3pm: {'E': 0, 'ENE': 1, 'ESE': 2, 'N': 3, 'NE': 4, 'NNE': 5, 'NNW': 6, 'NW': 7, 'S': 8, 'SE': 9, 'SSE': 10, 'SSW': 11, 'SW': 12, 'W': 13, 'WNW': 14, 'WSW': 15}
+2025-05-01 11:53:42,102 - INFO - Label mapping for RainToday: {'No': 0, 'Yes': 1}
+2025-05-01 11:53:42,140 - INFO - Label mapping for RainTomorrow: {'No': 0, 'Yes': 1}
+2025-05-01 11:53:42,140 - INFO - Label encoding done...
+2025-05-01 11:53:42,251 - INFO - Data split into training and testing sets.
+2025-05-01 11:53:42,259 - INFO - Data processing completed successfully.
+2025-05-01 12:13:56,383 - INFO - Model Training initialized.
+2025-05-01 12:13:56,537 - INFO - Data loaded successfully from artifacts/processed.
+2025-05-01 12:13:57,353 - INFO - Model training and saving completed.
+2025-05-01 12:13:57,429 - INFO - Training score: 0.8990582814647159
+2025-05-01 12:13:57,476 - INFO - Accuracy: 0.8649260366987309 ; Precision: 0.8580527908230612 ; Recall: 0.8649260366987309 ; F1 Score: 0.8584494174064223
+2025-05-01 12:13:57,476 - INFO - Model evaluation completed.
+2025-05-01 12:13:57,476 - INFO - Model training and evaluation completed successfully.
+2025-05-01 12:20:27,513 - INFO - Data Processing initialized.
+2025-05-01 12:20:27,984 - INFO - Data loaded succesfully from artifacts/raw/weatherAUS.csv.
+2025-05-01 12:20:28,328 - INFO - Basic processing done...
+2025-05-01 12:20:28,359 - INFO - Label mapping for Location: {'Adelaide': 0, 'Albury': 1, 'AliceSprings': 2, 'BadgerysCreek': 3, 'Ballarat': 4, 'Bendigo': 5, 'Brisbane': 6, 'Cairns': 7, 'Canberra': 8, 'Cobar': 9, 'CoffsHarbour': 10, 'Dartmoor': 11, 'Darwin': 12, 'GoldCoast': 13, 'Hobart': 14, 'Katherine': 15, 'Launceston': 16, 'Melbourne': 17, 'MelbourneAirport': 18, 'Mildura': 19, 'Moree': 20, 'MountGambier': 21, 'MountGinini': 22, 'Nhil': 23, 'NorahHead': 24, 'NorfolkIsland': 25, 'Nuriootpa': 26, 'PearceRAAF': 27, 'Penrith': 28, 'Perth': 29, 'PerthAirport': 30, 'Portland': 31, 'Richmond': 32, 'Sale': 33, 'SalmonGums': 34, 'Sydney': 35, 'SydneyAirport': 36, 'Townsville': 37, 'Tuggeranong': 38, 'Uluru': 39, 'WaggaWagga': 40, 'Walpole': 41, 'Watsonia': 42, 'Williamtown': 43, 'Witchcliffe': 44, 'Wollongong': 45, 'Woomera': 46}
+2025-05-01 12:20:28,391 - INFO - Label mapping for WindGustDir: {'E': 0, 'ENE': 1, 'ESE': 2, 'N': 3, 'NE': 4, 'NNE': 5, 'NNW': 6, 'NW': 7, 'S': 8, 'SE': 9, 'SSE': 10, 'SSW': 11, 'SW': 12, 'W': 13, 'WNW': 14, 'WSW': 15}
+2025-05-01 12:20:28,406 - INFO - Label mapping for WindDir9am: {'E': 0, 'ENE': 1, 'ESE': 2, 'N': 3, 'NE': 4, 'NNE': 5, 'NNW': 6, 'NW': 7, 'S': 8, 'SE': 9, 'SSE': 10, 'SSW': 11, 'SW': 12, 'W': 13, 'WNW': 14, 'WSW': 15}
+2025-05-01 12:20:28,438 - INFO - Label mapping for WindDir3pm: {'E': 0, 'ENE': 1, 'ESE': 2, 'N': 3, 'NE': 4, 'NNE': 5, 'NNW': 6, 'NW': 7, 'S': 8, 'SE': 9, 'SSE': 10, 'SSW': 11, 'SW': 12, 'W': 13, 'WNW': 14, 'WSW': 15}
+2025-05-01 12:20:28,453 - INFO - Label mapping for RainToday: {'No': 0, 'Yes': 1}
+2025-05-01 12:20:28,485 - INFO - Label mapping for RainTomorrow: {'No': 0, 'Yes': 1}
+2025-05-01 12:20:28,485 - INFO - Label encoding done...
+2025-05-01 12:20:28,580 - INFO - Data split into training and testing sets.
+2025-05-01 12:20:28,581 - INFO - Data processing completed successfully.
+2025-05-01 12:20:28,581 - INFO - Model Training initialized.
+2025-05-01 12:20:28,689 - INFO - Data loaded successfully from artifacts/processed.
+2025-05-01 12:20:29,492 - INFO - Model training and saving completed.
+2025-05-01 12:20:29,554 - INFO - Training score: 0.8990582814647159
+2025-05-01 12:20:29,597 - INFO - Accuracy: 0.8649260366987309 ; Precision: 0.8580527908230612 ; Recall: 0.8649260366987309 ; F1 Score: 0.8584494174064223
+2025-05-01 12:20:29,597 - INFO - Model evaluation completed.
+2025-05-01 12:20:29,597 - INFO - Model training and evaluation completed successfully.
