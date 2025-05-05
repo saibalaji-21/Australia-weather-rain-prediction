@@ -1,6 +1,13 @@
 import joblib
 from flask import Flask,render_template,request
 import numpy as np
+import mlflow
+import os
+
+# MLflow + DagsHub setup
+mlflow.set_tracking_uri("https://dagshub.com/saibalaji-21/Australia-weather-rain-prediction.mlflow")
+os.environ["MLFLOW_TRACKING_USERNAME"] = "saibalaji-21"
+os.environ["MLFLOW_TRACKING_PASSWORD"] = "a5b420c5840a5c9eda2340c4632291eefefa6324"
 
 app = Flask(__name__)
 
@@ -30,6 +37,12 @@ def index():
             pred = model.predict(input_array)[0]
             prediction = LABELS.get(pred, 'Unknown')
             print(prediction)
+
+            # MLflow logging
+            with mlflow.start_run():
+                for feature in FEATURES:
+                    mlflow.log_param(feature, request.form.get(feature))
+                mlflow.log_metric("Prediction", int(pred))
 
         except Exception as e:
             print(str(e))
