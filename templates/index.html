@@ -8,23 +8,119 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div class="background-gradient"></div>
         <div class="container">
-            <h1>Australia Weather Rain Prediction</h1>
-            <form method="post">
+            <header class="header">
+                <span class="logo">🌦️</span>
+                <h1>Australia Weather Rain Prediction</h1>
+            </header>
+            <form method="post" class="form-grid" id="weatherForm">
                 {% for feature in features %}
                     <div class="form-group">
                         <label for="{{ feature }}">{{ feature }}:</label>
-                        <input type="text" name="{{ feature }}" required>
+                        {% if feature == 'Location' %}
+                            <select name="Location" required>
+                                <option value="" disabled {% if not request.form.get('Location') %}selected{% endif %}>Select Location</option>
+                                <option value="0" {% if request.form.get('Location') == '0' %}selected{% endif %}>Adelaide</option>
+                                <option value="1" {% if request.form.get('Location') == '1' %}selected{% endif %}>Albury</option>
+                                <option value="2" {% if request.form.get('Location') == '2' %}selected{% endif %}>AliceSprings</option>
+                                <option value="3" {% if request.form.get('Location') == '3' %}selected{% endif %}>BadgerysCreek</option>
+                                <option value="4" {% if request.form.get('Location') == '4' %}selected{% endif %}>Ballarat</option>
+                                <option value="5" {% if request.form.get('Location') == '5' %}selected{% endif %}>Bendigo</option>
+                                <option value="6" {% if request.form.get('Location') == '6' %}selected{% endif %}>Brisbane</option>
+                                <option value="7" {% if request.form.get('Location') == '7' %}selected{% endif %}>Cairns</option>
+                                <option value="8" {% if request.form.get('Location') == '8' %}selected{% endif %}>Canberra</option>
+                                <option value="9" {% if request.form.get('Location') == '9' %}selected{% endif %}>Cobar</option>
+                                <option value="10" {% if request.form.get('Location') == '10' %}selected{% endif %}>CoffsHarbour</option>
+                                <option value="11" {% if request.form.get('Location') == '11' %}selected{% endif %}>Dartmoor</option>
+                                <option value="12" {% if request.form.get('Location') == '12' %}selected{% endif %}>Darwin</option>
+                                <option value="13" {% if request.form.get('Location') == '13' %}selected{% endif %}>GoldCoast</option>
+                                <option value="14" {% if request.form.get('Location') == '14' %}selected{% endif %}>Hobart</option>
+                                <option value="15" {% if request.form.get('Location') == '15' %}selected{% endif %}>Katherine</option>
+                                <option value="16" {% if request.form.get('Location') == '16' %}selected{% endif %}>Launceston</option>
+                                <option value="17" {% if request.form.get('Location') == '17' %}selected{% endif %}>Melbourne</option>
+                                <option value="18" {% if request.form.get('Location') == '18' %}selected{% endif %}>MelbourneAirport</option>
+                                <option value="19" {% if request.form.get('Location') == '19' %}selected{% endif %}>Mildura</option>
+                                <option value="20" {% if request.form.get('Location') == '20' %}selected{% endif %}>Moree</option>
+                                <option value="21" {% if request.form.get('Location') == '21' %}selected{% endif %}>MountGambier</option>
+                                <option value="22" {% if request.form.get('Location') == '22' %}selected{% endif %}>MountGinini</option>
+                                <option value="23" {% if request.form.get('Location') == '23' %}selected{% endif %}>Nhil</option>
+                                <option value="24" {% if request.form.get('Location') == '24' %}selected{% endif %}>NorahHead</option>
+                                <option value="25" {% if request.form.get('Location') == '25' %}selected{% endif %}>NorfolkIsland</option>
+                                <option value="26" {% if request.form.get('Location') == '26' %}selected{% endif %}>Nuriootpa</option>
+                                <option value="27" {% if request.form.get('Location') == '27' %}selected{% endif %}>PearceRAAF</option>
+                                <option value="28" {% if request.form.get('Location') == '28' %}selected{% endif %}>Penrith</option>
+                                <option value="29" {% if request.form.get('Location') == '29' %}selected{% endif %}>Perth</option>
+                                <option value="30" {% if request.form.get('Location') == '30' %}selected{% endif %}>PerthAirport</option>
+                                <option value="31" {% if request.form.get('Location') == '31' %}selected{% endif %}>Portland</option>
+                                <option value="32" {% if request.form.get('Location') == '32' %}selected{% endif %}>Richmond</option>
+                                <option value="33" {% if request.form.get('Location') == '33' %}selected{% endif %}>Sale</option>
+                                <option value="34" {% if request.form.get('Location') == '34' %}selected{% endif %}>SalmonGums</option>
+                                <option value="35" {% if request.form.get('Location') == '35' %}selected{% endif %}>Sydney</option>
+                                <option value="36" {% if request.form.get('Location') == '36' %}selected{% endif %}>SydneyAirport</option>
+                                <option value="37" {% if request.form.get('Location') == '37' %}selected{% endif %}>Townsville</option>
+                                <option value="38" {% if request.form.get('Location') == '38' %}selected{% endif %}>Tuggeranong</option>
+                                <option value="39" {% if request.form.get('Location') == '39' %}selected{% endif %}>Uluru</option>
+                                <option value="40" {% if request.form.get('Location') == '40' %}selected{% endif %}>WaggaWagga</option>
+                                <option value="41" {% if request.form.get('Location') == '41' %}selected{% endif %}>Walpole</option>
+                                <option value="42" {% if request.form.get('Location') == '42' %}selected{% endif %}>Watsonia</option>
+                                <option value="43" {% if request.form.get('Location') == '43' %}selected{% endif %}>Williamtown</option>
+                                <option value="44" {% if request.form.get('Location') == '44' %}selected{% endif %}>Witchcliffe</option>
+                                <option value="45" {% if request.form.get('Location') == '45' %}selected{% endif %}>Wollongong</option>
+                                <option value="46" {% if request.form.get('Location') == '46' %}selected{% endif %}>Woomera</option>
+                            </select>
+                        {% elif feature in ['WindGustDir', 'WindDir9am', 'WindDir3pm'] %}
+                            <select name="{{ feature }}" required>
+                                <option value="" disabled {% if not request.form.get(feature) %}selected{% endif %}>Select {{ feature }}</option>
+                                <option value="0" {% if request.form.get(feature) == '0' %}selected{% endif %}>E</option>
+                                <option value="1" {% if request.form.get(feature) == '1' %}selected{% endif %}>ENE</option>
+                                <option value="2" {% if request.form.get(feature) == '2' %}selected{% endif %}>ESE</option>
+                                <option value="3" {% if request.form.get(feature) == '3' %}selected{% endif %}>N</option>
+                                <option value="4" {% if request.form.get(feature) == '4' %}selected{% endif %}>NE</option>
+                                <option value="5" {% if request.form.get(feature) == '5' %}selected{% endif %}>NNE</option>
+                                <option value="6" {% if request.form.get(feature) == '6' %}selected{% endif %}>NNW</option>
+                                <option value="7" {% if request.form.get(feature) == '7' %}selected{% endif %}>NW</option>
+                                <option value="8" {% if request.form.get(feature) == '8' %}selected{% endif %}>S</option>
+                                <option value="9" {% if request.form.get(feature) == '9' %}selected{% endif %}>SE</option>
+                                <option value="10" {% if request.form.get(feature) == '10' %}selected{% endif %}>SSE</option>
+                                <option value="11" {% if request.form.get(feature) == '11' %}selected{% endif %}>SSW</option>
+                                <option value="12" {% if request.form.get(feature) == '12' %}selected{% endif %}>SW</option>
+                                <option value="13" {% if request.form.get(feature) == '13' %}selected{% endif %}>W</option>
+                                <option value="14" {% if request.form.get(feature) == '14' %}selected{% endif %}>WNW</option>
+                                <option value="15" {% if request.form.get(feature) == '15' %}selected{% endif %}>WSW</option>
+                            </select>
+                        {% elif feature == 'RainToday' %}
+                            <select name="RainToday" required>
+                                <option value="" disabled {% if not request.form.get('RainToday') %}selected{% endif %}>Select RainToday</option>
+                                <option value="0" {% if request.form.get('RainToday') == '0' %}selected{% endif %}>No</option>
+                                <option value="1" {% if request.form.get('RainToday') == '1' %}selected{% endif %}>Yes</option>
+                            </select>
+                        {% else %}
+                            <input type="text" name="{{ feature }}" required value="{{ request.form.get(feature, '') }}">
+                        {% endif %}
                     </div>
                 {% endfor %}
-                <button type="submit">Predict</button>
+                <div class="button-row">
+                    <button type="submit">Predict</button>
+                    <a href="{{ url_for('index') }}" class="clear-btn">Clear All</a>
+                </div>
             </form>
 
             {% if prediction is not none %}
                 <div class="prediction-box">
+                    {% if prediction == 'YES' %}
+                        <span class="prediction-icon yes">✔️</span>
+                    {% elif prediction == 'NO' %}
+                        <span class="prediction-icon no">❌</span>
+                    {% else %}
+                        <span class="prediction-icon">❓</span>
+                    {% endif %}
                     <h2>Prediction: {{ prediction }}</h2>
                 </div>
             {% endif %}
+            <footer class="footer">
+                <p>Made with ❤️ for Australia Weather | 2025</p>
+            </footer>
         </div>
     </body>
 </html>
